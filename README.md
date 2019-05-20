@@ -27,5 +27,11 @@ Rename ``config-sample.json`` and fill out the fields as described below
  - **enableProxy** - Allows you update the record, ensuring if the DNS proxy is enabled or disabled.
  - **updatePublicIP** - If true, will update the record with the public IP of the device it's running on
 
+## Automation
+In Linux, run ``crontab -e`` and provide one of the following lines to make this script run regularly. Please check the path of the script first.
 
+**Hourly (on the hour)** 
+``0 * * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
 
+**Daily at 00:00**
+``0 0 * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
