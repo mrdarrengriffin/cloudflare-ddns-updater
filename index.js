@@ -1,7 +1,7 @@
 var externalip = require('externalip')
 const fs = require('fs')
 
-var config = JSON.parse(fs.readFileSync('config.json').toString())
+var config = JSON.parse(fs.readFileSync(__dirname+'/config.json').toString())
 
 var cf = require('cloudflare')({
     email: config.email,
