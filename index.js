@@ -40,7 +40,7 @@ if (config.updateRecords) {
                     record.content = ip
                 }
                 record.proxied = dnsRecord.enableProxy
-                cf.dnsRecords.edit('aaad46b3d8335e8519c94a0700deff81', dnsRecord.id, record).then(recordUpdateResult => {
+                cf.dnsRecords.edit(config.zoneId, dnsRecord.id, record).then(recordUpdateResult => {
                     var recordUpdate = recordUpdateResult.result
                     console.log("(%s) %s > %s", recordUpdate.type, recordUpdate.name, recordUpdate.content)
                     console.log("Update Status:", (recordUpdateResult.success ? "Success" : "Fail"))
