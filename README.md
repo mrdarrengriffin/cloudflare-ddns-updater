@@ -1,8 +1,8 @@
 # Cloudflare Dynamic DNS Updater
 A script to automatically update Cloudflare DNS records with your public IP. Suitable for home web servers, etc.
 
-## config.json
-Rename ``config-sample.json`` and fill out the fields as described below
+## Configurationson
+Rename ``config-sample.json`` to ``config.json`` and fill out the fields as described below
 
 **email** - Provide the email used to manage your Cloudflare account
 
