@@ -1,12 +1,17 @@
 # Cloudflare Dynamic DNS Updater
 A script to automatically update Cloudflare DNS records with your public IP. Suitable for home web servers, etc.
 
+## Dependencies
+You need to have NodeJS and NPM installed for this script to work. To install this, run 
+
+    $ sudo apt-get install nodejs npm -y
+
 ## Installation
 In your home directory, run 
 
     $ git clone https://github.com/mrdarrengriffin/cloudflare-ddns-updater.git
     $ cd cloudflare-ddns-updater
-    $ npm install
+    $ sudo npm install
     $ rename config-sample.json config.json
     $ nano config.json
     
