@@ -31,7 +31,9 @@ Rename ``config-sample.json`` and fill out the fields as described below
 In Linux, run ``crontab -e`` and provide one of the following lines to make this script run regularly. Please check the path of the script first.
 
 **Hourly (on the hour)** 
+
 ``0 * * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
 
 **Daily at 00:00**
+
 ``0 0 * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
