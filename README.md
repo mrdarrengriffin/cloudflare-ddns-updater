@@ -44,12 +44,12 @@ Rename ``config-sample.json`` to ``config.json`` and fill out the fields as desc
  - **updatePublicIP** - If true, will update the record with the public IP of the device it's running on
 
 ## Automation
-In Linux, run ``crontab -e`` and provide one of the following lines to make this script run regularly. Please check the path of the script first.
+In Linux, run ``crontab -e`` and provide one of the following lines to make this script run regularly. Please check the path of the script first. Be sure to replace {USER} with the path of where you cloned the git repo
 
 **Hourly (on the hour)** 
 
-``0 * * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
+``0 * * * * /usr/bin/node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
 
 **Daily at 00:00**
 
-``0 0 * * * node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
+``0 0 * * * /usr/bin/node /home/{USER}/cloudflare-ddns-updater/index.js > /dev/null 2>&1``
