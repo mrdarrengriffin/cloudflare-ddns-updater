@@ -37,6 +37,9 @@ if (config.updateRecords) {
             cf.dnsRecords.read(config.zoneId, dnsRecord.id).then(recordData => {
                 var record = recordData.result
                 record = Object.assign(record, dnsRecord.changes)
+                if(dnsRecord.updatePublicIp){
+                    record.content = ip
+                }
                 cf.dnsRecords.edit('aaad46b3d8335e8519c94a0700deff81', dnsRecord.id, record).then(recordUpdateResult => {
                     var recordUpdate = recordUpdateResult.result
                     console.log("(%s) %s > %s", recordUpdate.type, recordUpdate.name, recordUpdate.content)
