@@ -2,7 +2,7 @@
     "email": "CLOUDFLARE_EMAIL",
     "apiKey": "GLOBAL_API_KEY",
     "zoneId": "ZONE_ID",
-    "listZoneIds":true,
+    "listDNSRecordIds":true,
     "updateRecords":false,
     "dnsRecords": [{
             "id": "ID_OF_DNS_RECORD",
