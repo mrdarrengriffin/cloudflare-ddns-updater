@@ -12,7 +12,7 @@ In your home directory, run
     $ git clone https://github.com/mrdarrengriffin/cloudflare-ddns-updater.git
     $ cd cloudflare-ddns-updater
     $ sudo npm install
-    $ rename config-sample.json config.json
+    $ mv config-sample.json config.json
     $ nano config.json
     
 You should now be in the config file. See below on how to fill out the values
@@ -26,8 +26,8 @@ Rename ``config-sample.json`` to ``config.json`` and fill out the fields as desc
 
 **zoneId** - Found at the bottom of zone dashboard
 
-**listZoneIds** - Useful for logging the IDs of your Cloudflare DNS records for the config.
-	``"listZoneIds": true/false``
+**listDNSRecordIds** - Useful for logging the IDs of your Cloudflare DNS records for the config.
+	``"listDNSRecordIds": true/false``
 	
 **updateRecords** - Boolean to turn off updating records. Useful if you don't want to change any schedules running this script
 	``"updateRecords": true/false``
